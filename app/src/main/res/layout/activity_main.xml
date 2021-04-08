@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+    <TableRow>
+        <TextView
+            android:layout_span="2"
+            android:background="#007700"
+            android:gravity="center"
+            android:text="Quản lý nhân viên"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Mã NV:"
+            android:textColor="@color/black"
+            android:layout_marginRight="35dp"/>
+        <EditText
+            android:id="@+id/maNV"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Tên NV:"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/tenNV"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Giới tính:"
+            android:textColor="@color/black"
+            android:layout_gravity="left|center"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/female"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nữ" />
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam" />
+        </RadioGroup>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/btn"
+            android:layout_column="1"
+            android:text="nhập nv" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_span="2"
+            android:background="#007700"
+            android:gravity="left"
+            android:text="Danh sách nhân viên:"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginRight="50dp"/>
+    </TableRow>
+    <LinearLayout>
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
+</TableLayout>
